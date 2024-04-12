@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/notes')
+        const response = await fetch('http://localhost:10000/api/notes')
 
         const notes: Note[] = await response.json()
 
@@ -34,7 +34,7 @@ const App = () => {
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/notes',
+        'http://localhost:10000/api/notes',
         {
           method: "POST",
           headers: {
@@ -72,7 +72,7 @@ const App = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/notes/${selectedNote.id}`,
+        `http://localhost:10000/api/notes/${selectedNote.id}`,
         {
           method: 'PUT',
           headers: {
@@ -109,7 +109,7 @@ const App = () => {
 
     try {
       await fetch(
-        `http://localhost:5000/api/notes/${noteId}`,
+        `http://localhost:10000/api/notes/${noteId}`,
         {
           method: 'DELETE',
         }
